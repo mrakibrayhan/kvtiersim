@@ -63,8 +63,7 @@ def tab_ablation(res):
          r"\midrule", r"Setting & 32K & 128K \\", r"\midrule"]
     for key, lab in (("default", "Default (overlapped tiers)"),
                      ("no-overlap", "Serialised HBM and far tier"),
-                     ("SLO 50 ms", "TPOT SLO 50 ms"),
-                     ("no SLO", "No TPOT SLO")):
+                     ):
         cells = []
         for c in ("32768", "131072"):
             v = {r["policy"]: r["speedup_vs_hbm_only"] for r in e5
@@ -78,8 +77,6 @@ def tab_ablation(res):
              ("CGP beta=0 (current score only)", r"$\beta$=0 (no EMA)"),
              ("CGP beta=0.6", r"$\beta$=0.6"),
              ("CGP beta=0.9", r"$\beta$=0.9"),
-             ("CGP gate off (promote every miss)", "Gate off"),
-             ("CGP hysteresis delta=0.25", r"$\delta$=0.25"),
              ("CGP + prefetch M=2", r"Prefetch $M$=2")]
     for key, lab in names:
         cells = []
