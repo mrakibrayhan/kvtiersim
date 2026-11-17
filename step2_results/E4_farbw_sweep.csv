@@ -1,0 +1,71 @@
+ctx,far_bw_GBs,policy,attention,speedup_vs_hbm_only
+32768,16,Interleave,sparse,1.0
+32768,16,LRU,sparse,1.616
+32768,16,CGP,sparse,1.655
+32768,16,Oracle,sparse,2.814
+32768,16,(full attention),full,1.0
+32768,32,Interleave,sparse,1.073
+32768,32,LRU,sparse,1.797
+32768,32,CGP,sparse,1.896
+32768,32,Oracle,sparse,2.855
+32768,32,(full attention),full,1.0
+32768,64,Interleave,sparse,1.073
+32768,64,LRU,sparse,2.126
+32768,64,CGP,sparse,2.231
+32768,64,Oracle,sparse,2.929
+32768,64,(full attention),full,1.0
+32768,128,Interleave,sparse,1.225
+32768,128,LRU,sparse,2.505
+32768,128,CGP,sparse,2.575
+32768,128,Oracle,sparse,2.986
+32768,128,(full attention),full,1.045
+32768,256,Interleave,sparse,1.441
+32768,256,LRU,sparse,2.803
+32768,256,CGP,sparse,2.84
+32768,256,Oracle,sparse,3.128
+32768,256,(full attention),full,1.045
+32768,450,Interleave,sparse,1.832
+32768,450,LRU,sparse,3.043
+32768,450,CGP,sparse,3.12
+32768,450,Oracle,sparse,3.356
+32768,450,(full attention),full,1.126
+32768,900,Interleave,sparse,2.696
+32768,900,LRU,sparse,3.384
+32768,900,CGP,sparse,3.398
+32768,900,Oracle,sparse,3.384
+32768,900,(full attention),full,1.352
+131072,16,Interleave,sparse,1.402
+131072,16,LRU,sparse,3.175
+131072,16,CGP,sparse,3.441
+131072,16,Oracle,sparse,4.933
+131072,16,(full attention),full,1.0
+131072,32,Interleave,sparse,1.402
+131072,32,LRU,sparse,3.878
+131072,32,CGP,sparse,4.091
+131072,32,Oracle,sparse,4.933
+131072,32,(full attention),full,1.0
+131072,64,Interleave,sparse,1.775
+131072,64,LRU,sparse,4.713
+131072,64,CGP,sparse,4.848
+131072,64,Oracle,sparse,4.933
+131072,64,(full attention),full,1.0
+131072,128,Interleave,sparse,2.418
+131072,128,LRU,sparse,4.933
+131072,128,CGP,sparse,4.933
+131072,128,Oracle,sparse,4.933
+131072,128,(full attention),full,1.0
+131072,256,Interleave,sparse,3.41
+131072,256,LRU,sparse,4.933
+131072,256,CGP,sparse,4.933
+131072,256,Oracle,sparse,4.933
+131072,256,(full attention),full,1.0
+131072,450,Interleave,sparse,5.073
+131072,450,LRU,sparse,4.933
+131072,450,CGP,sparse,4.933
+131072,450,Oracle,sparse,4.933
+131072,450,(full attention),full,1.0
+131072,900,Interleave,sparse,5.702
+131072,900,LRU,sparse,4.933
+131072,900,CGP,sparse,4.933
+131072,900,Oracle,sparse,4.933
+131072,900,(full attention),full,1.286

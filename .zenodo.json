@@ -1,0 +1,15 @@
+{
+  "title": "KVTierSim: KV-Cache Tiering for Long-Context LLM Decoding",
+  "upload_type": "software",
+  "description": "Trace-driven simulator and results for HBM + CXL/LPDDR5X KV-cache tiering in long-context LLM decoding, with and without query-aware sparse attention, including the Criticality-Guided Placement (CGP) policy. Contains the simulator (Python), experiments E1-E6, CSV results and figures.",
+  "creators": [
+    {
+      "name": "Rayhan, Md. Rakib",
+      "affiliation": "North South University",
+      "orcid": "0009-0008-3995-0042"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": ["computer architecture", "memory hierarchy", "CXL", "KV cache", "LLM inference", "sparse attention", "simulation"]
+}

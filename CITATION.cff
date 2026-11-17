@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "KVTierSim: KV-Cache Tiering for Long-Context LLM Decoding"
+type: software
+authors:
+  - family-names: "Rayhan"
+    given-names: "Md. Rakib"
+    affiliation: "North South University"
+    orcid: "https://orcid.org/0009-0008-3995-0042"
+license: MIT
+repository-code: "https://github.com/mrakibrayhan/kvtiersim"
+version: "1.0.0"
+date-released: "2026-11-17"
+keywords:
+  - computer architecture
+  - memory hierarchy
+  - CXL
+  - KV cache
+  - LLM inference
+  - sparse attention
+  - simulation

@@ -1,0 +1,41 @@
+{
+  "model": "Llama-3.1-8B (GQA)",
+  "kv_bytes_per_token": 131072,
+  "page_tokens": 16,
+  "budget_tokens": 2048,
+  "trace": {
+    "sigma_a": 1.0,
+    "sigma_z": 1.0,
+    "steps": 512,
+    "warmup": 128,
+    "seed": 1
+  },
+  "slo_s": 0.1,
+  "platforms": [
+    {
+      "name": "HBM3 + CXL (x16)",
+      "hbm_cap": 80000000000.0,
+      "hbm_bw": 3350000000000.0,
+      "far_cap": 512000000000.0,
+      "far_bw": 64000000000.0,
+      "peak_flops": 989000000000000.0,
+      "flop_eff": 0.5,
+      "bw_eff": 0.8,
+      "hbm_usable": 0.9,
+      "activation_bytes": 2000000000.0
+    },
+    {
+      "name": "HBM3 + LPDDR5X (C2C)",
+      "hbm_cap": 96000000000.0,
+      "hbm_bw": 4000000000000.0,
+      "far_cap": 480000000000.0,
+      "far_bw": 450000000000.0,
+      "peak_flops": 989000000000000.0,
+      "flop_eff": 0.5,
+      "bw_eff": 0.8,
+      "hbm_usable": 0.9,
+      "activation_bytes": 2000000000.0
+    }
+  ],
+  "runtime_s": 64.9
+}
