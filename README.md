@@ -1,5 +1,7 @@
 # KVTierSim: KV-Cache Tiering for Long-Context LLM Decoding
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24301736.svg)](https://doi.org/10.5281/zenodo.24301736)
+
 Trace-driven simulation study of HBM + far-tier (CXL / LPDDR5X) memory
 hierarchies for the KV cache of long-context LLM decoding, with and without
 query-aware sparse attention. Includes **CGP (Criticality-Guided Placement)**,
