@@ -130,9 +130,9 @@ class CGP(Base):
     """
     name = "CGP"
 
-    def __init__(self, Q, cap, sp, rng, beta=0.3, M=0, delta=0.0):
+    def __init__(self, Q, cap, sp, rng, beta=0.3, M=0, delta=0.0, gate=True):
         super().__init__(Q, cap, sp, rng)
-        self.beta, self.M, self.delta = beta, M, delta
+        self.beta, self.M, self.delta, self.gate = beta, M, delta, gate
         self.e = np.zeros(cap)
 
     def _pinned(self, n):
@@ -179,7 +179,7 @@ class CGP(Base):
         Q = min(self.Q, n)
         thr = np.partition(self.e[:n], n - Q)[n - Q] if Q > 0 else np.inf
         # (3) promote-on-miss for pages inside the desired set
-        cand = np.flatnonzero(miss & (self.e[:n] >= thr))
+        cand = np.flatnonzero(miss & (self.e[:n] >= thr)) if self.gate else np.flatnonzero(miss)
         # (4) background prefetch of best non-resident pages
         nonres = np.flatnonzero(~self.res[:n] & ~miss)
         if nonres.size and self.M > 0:

@@ -1,0 +1,33 @@
+ctx,rho,q,variant,far_pages_mean,cut_vs_lru_mean_pct,cut_vs_lru_std_pct,seeds
+32768,0.5,0.04,LRU (baseline),87.5,0.0,0.0,5
+32768,0.5,0.04,"CGP default (beta=0.3, gate on, M=0)",80.42,8.08,0.47,5
+32768,0.5,0.04,CGP beta=0 (current score only),80.92,7.51,0.45,5
+32768,0.5,0.04,CGP beta=0.6,81.14,7.26,0.42,5
+32768,0.5,0.04,CGP beta=0.9,83.65,4.4,0.64,5
+32768,0.5,0.04,CGP gate off (promote every miss),80.42,8.08,0.47,5
+32768,0.5,0.04,CGP + prefetch M=2,80.42,8.08,0.47,5
+32768,0.5,0.04,CGP hysteresis delta=0.25,80.75,7.71,0.44,5
+32768,0.9,0.04,LRU (baseline),64.66,0.0,0.0,5
+32768,0.9,0.04,"CGP default (beta=0.3, gate on, M=0)",57.11,11.67,0.33,5
+32768,0.9,0.04,CGP beta=0 (current score only),57.04,11.79,0.36,5
+32768,0.9,0.04,CGP beta=0.6,58.89,8.93,0.45,5
+32768,0.9,0.04,CGP beta=0.9,70.41,-8.89,0.77,5
+32768,0.9,0.04,CGP gate off (promote every miss),57.11,11.67,0.33,5
+32768,0.9,0.04,CGP + prefetch M=2,57.11,11.67,0.33,5
+32768,0.9,0.04,CGP hysteresis delta=0.25,57.52,11.04,0.38,5
+131072,0.5,0.04,LRU (baseline),63.28,0.0,0.0,5
+131072,0.5,0.04,"CGP default (beta=0.3, gate on, M=0)",57.28,9.48,0.33,5
+131072,0.5,0.04,CGP beta=0 (current score only),57.18,9.65,0.28,5
+131072,0.5,0.04,CGP beta=0.6,57.95,8.43,0.4,5
+131072,0.5,0.04,CGP beta=0.9,60.3,4.71,0.51,5
+131072,0.5,0.04,CGP gate off (promote every miss),57.28,9.48,0.31,5
+131072,0.5,0.04,CGP + prefetch M=2,58.99,6.78,0.32,5
+131072,0.5,0.04,CGP hysteresis delta=0.25,57.28,9.48,0.33,5
+131072,0.9,0.04,LRU (baseline),22.4,0.0,0.0,5
+131072,0.9,0.04,"CGP default (beta=0.3, gate on, M=0)",19.88,11.24,0.28,5
+131072,0.9,0.04,CGP beta=0 (current score only),19.88,11.24,0.24,5
+131072,0.9,0.04,CGP beta=0.6,20.67,7.74,0.44,5
+131072,0.9,0.04,CGP beta=0.9,35.23,-57.27,1.55,5
+131072,0.9,0.04,CGP gate off (promote every miss),19.88,11.25,0.28,5
+131072,0.9,0.04,CGP + prefetch M=2,21.0,6.26,0.28,5
+131072,0.9,0.04,CGP hysteresis delta=0.25,19.88,11.24,0.28,5

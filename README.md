@@ -30,12 +30,19 @@ python3 run_all.py            # writes ../step2_results/E1..E5 *.csv + run_meta.
 python3 seeds_cgp_vs_lru.py   # writes ../step2_results/E6_cgp_vs_lru_seeds.csv
 ```
 
-### Step 3: Make the figures (about 5 s)
+### Step 3: CGP ablation on held-out seeds, E7 (about 3 min)
 ```bash
-python3 make_figures.py       # fig1..fig3 as .pdf and .png in ../step2_results
+python3 ablation_cgp.py       # writes ../step2_results/E7_cgp_ablation.csv
 ```
 
-### Step 4 (optional): Replay real model traces (GPU, about 1–3 h)
+### Step 4: Make the figures and LaTeX tables (about 5 s)
+```bash
+python3 make_figures.py       # fig2..fig4 as .pdf and .png in ../step2_results
+python3 gen_tables.py         # LaTeX tables in ../step2_results/tables
+```
+(Fig. 1 of the paper is a TikZ drawing of the modelled system and this flow.)
+
+### Step 5 (optional): Replay real model traces (GPU, about 1–3 h)
 ```bash
 pip install torch transformers
 python3 tools/extract_traces.py --model meta-llama/Llama-3.2-1B \
@@ -69,6 +76,7 @@ trace, reports selection churn, and compares all placement policies on it.
 | E4 | `E4_farbw_sweep.csv` | Speedup vs far-tier bandwidth (16–900 GB/s) |
 | E5 | `E5_sensitivity.csv` | Serialised memory tiers, TPOT SLO, prefetch ablation |
 | E6 | `E6_cgp_vs_lru_seeds.csv` | CGP vs LRU far-traffic reduction, 5 seeds |
+| E7 | `E7_cgp_ablation.csv` | CGP component ablation (EMA weight, gate, hysteresis, prefetch), 5 held-out seeds |
 
 ## Model assumptions (see `config.py`)
 - Page-level traces are synthetic (Eq. in `traces.py`) unless replayed from `tools/`.

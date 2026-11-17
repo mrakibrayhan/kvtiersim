@@ -1,0 +1,24 @@
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\multicolumn{3}{@{}l}{(a) Speedup over HBM-only, Platform A, $\rho=0.9$ (LRU / CGP)} \\
+\midrule
+Setting & 32K & 128K \\
+\midrule
+Default (overlapped tiers) & 2.13 / 2.23 & 4.71 / 4.85 \\
+Serialised HBM and far tier & 1.32 / 1.35 & 2.67 / 2.79 \\
+TPOT SLO 50 ms & 2.13 / 2.23 & 4.71 / 4.85 \\
+No TPOT SLO & 2.13 / 2.23 & 4.71 / 4.85 \\
+\midrule
+\multicolumn{3}{@{}l}{(b) Far-tier traffic cut vs.\ LRU (\%), quota 4\%, 5 held-out seeds} \\
+\midrule
+CGP variant & 32K, $\rho$=0.5 / 0.9 & 128K, $\rho$=0.5 / 0.9 \\
+\midrule
+Default ($\beta$=0.3, gate on, $M$=0) & 8.1 / 11.7 & 9.5 / 11.2 \\
+$\beta$=0 (no EMA) & 7.5 / 11.8 & 9.7 / 11.2 \\
+$\beta$=0.6 & 7.3 / 8.9 & 8.4 / 7.7 \\
+$\beta$=0.9 & 4.4 / $-$8.9 & 4.7 / $-$57.3 \\
+Gate off & 8.1 / 11.7 & 9.5 / 11.2 \\
+$\delta$=0.25 & 7.7 / 11.0 & 9.5 / 11.2 \\
+Prefetch $M$=2 & 8.1 / 11.7 & 6.8 / 6.3 \\
+\bottomrule
+\end{tabular}

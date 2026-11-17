@@ -1,0 +1,17 @@
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Platform A (CXL)} & \multicolumn{2}{c}{Platform B (C2C)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Configuration & 32K & 128K & 32K & 128K \\
+\midrule
+Full attn., HBM-only & 476 (12) & 119 (3) & 597 (15) & 142 (3) \\
+Full attn., tiered & 476 (12) & 119 (3) & 682 (18) & 152 (4) \\
+Sparse, HBM-only & 1346 (11) & 287 (2) & 1905 (14) & 479 (3) \\
+\midrule
+Sparse, Interleave & 1444 (12), 1.07$\times$ & 509 (4), 1.77$\times$ & 2942 (24), 1.54$\times$ & 1557 (17), 3.25$\times$ \\
+Sparse, Recency & 1536 (13), 1.14$\times$ & 509 (4), 1.77$\times$ & 3139 (27), 1.65$\times$ & 1597 (19), 3.33$\times$ \\
+Sparse, LRU & 2861 (40), 2.13$\times$ & 1352 (25), 4.71$\times$ & 4699 (111), 2.47$\times$ & 1654 (27), 3.45$\times$ \\
+Sparse, CGP & 3003 (45), 2.23$\times$ & 1391 (28), 4.85$\times$ & 4708 (111), 2.47$\times$ & 1654 (27), 3.45$\times$ \\
+Sparse, max-hit oracle & 3942 (103), 2.93$\times$ & 1415 (29), 4.93$\times$ & 4699 (111), 2.47$\times$ & 1654 (27), 3.45$\times$ \\
+\bottomrule
+\end{tabular}

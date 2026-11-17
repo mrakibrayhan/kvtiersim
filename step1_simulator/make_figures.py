@@ -70,7 +70,7 @@ def fig1(res):
     h, l = axs[0].get_legend_handles_labels()
     fig.legend(h, l, loc="upper center", ncol=2, frameon=False,
                bbox_to_anchor=(0.53, 1.17))
-    save(fig, res, "fig1_full_vs_sparse")
+    save(fig, res, "fig2_full_vs_sparse")
 
 
 def fig2(res):
@@ -111,8 +111,8 @@ def fig2(res):
     fig.tight_layout(w_pad=0.8)
     h, l = axs[0].get_legend_handles_labels()
     fig.legend(h, l, loc="upper center", ncol=5, frameon=False, fontsize=5.8,
-               handlelength=1.4, columnspacing=0.8, bbox_to_anchor=(0.5, 1.09))
-    save(fig, res, "fig2_policy_traffic")
+               handlelength=1.4, columnspacing=0.8, bbox_to_anchor=(0.5, 1.14))
+    save(fig, res, "fig3_policy_traffic")
 
 
 def fig3(res):
@@ -139,7 +139,7 @@ def fig3(res):
     h, l = axs[0].get_legend_handles_labels()
     fig.legend(h, l, loc="upper center", ncol=3, frameon=False,
                bbox_to_anchor=(0.53, 1.17))
-    save(fig, res, "fig3_farbw_sweep")
+    save(fig, res, "fig4_farbw_sweep")
 
 
 if __name__ == "__main__":
